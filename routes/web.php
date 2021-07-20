@@ -15,18 +15,18 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'admin'], function(){
-    Route::get('news/create', 'admin\NewsController@add');
+    Route::get('news/create', 'Admin\NewsController@add');
 });
 
 //PHP/Laravel 09 Routingについて理解する
 //課題3.
-Route::get('admin/XXX' , 'admin\AAAController@bbb');
+Route::get('admin/XXX' , 'Admin\AAAController@bbb');
 
 //課題4.
 //admin/profile/create にアクセスしたら ProfileController の add Action に割り当てる
-Route::get('admin/profile/create' , 'admin\ProfileController@add');
+Route::get('admin/profile/create' , 'Admin\ProfileController@add');
 //admin/profile/edit にアクセスしたら ProfileController の edit Action に割り当てる
-Route::get('admin/profile/edit' , 'admin\ProfileController@edit');
+Route::get('admin/profile/edit' , 'Admin\ProfileController@edit');
 //group化した場合は次のようになる
 //Route::group(['prefix' => 'admin/profile'], function(){
 //    Route::get('create' , 'admin\ProfileController@add');
