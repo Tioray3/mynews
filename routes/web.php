@@ -21,7 +21,7 @@ Route::group(['prefix' => 'admin'], function(){
 //PHP/Laravel 09 Routingについて理解する
 //課題3.「http://XXXXXX.jp/XXX というアクセスが来たときに、
 //      AAAControllerのbbbというAction に渡すRoutingの設定」を書いてみてください
-Route::get('XXX' , 'Admin\AAAController@bbb');
+Route::get('XXX' , 'AAAController@bbb');
 
 //課題4.
 //admin/profile/create にアクセスしたら ProfileController の add Action に割り当てる
