@@ -15,7 +15,7 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'admin'], function(){
-    Route::get('news/create', 'Admin\NewsController@add');
+    Route::get('news/create', 'Admin\NewsController@add')->middleware('auth');
 });
 
 //PHP/Laravel 09 Routingについて理解する
@@ -25,11 +25,14 @@ Route::get('XXX' , 'AAAController@bbb');
 
 //課題4.
 //admin/profile/create にアクセスしたら ProfileController の add Action に割り当てる
-Route::get('admin/profile/create' , 'Admin\ProfileController@add');
+Route::get('admin/profile/create' , 'Admin\ProfileController@add')->middleware('auth');
 //admin/profile/edit にアクセスしたら ProfileController の edit Action に割り当てる
-Route::get('admin/profile/edit' , 'Admin\ProfileController@edit');
+Route::get('admin/profile/edit' , 'Admin\ProfileController@edit')->middleware('auth');
 //group化した場合は次のようになる
 //Route::group(['prefix' => 'admin/profile'], function(){
 //    Route::get('create' , 'admin\ProfileController@add');
 //    Route::get('edit' , 'admin\ProfileController@edit');
 //});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
