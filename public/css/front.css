@@ -1,5 +1,6 @@
 body {
   color: #000;
+  background-color: #FFEEFF;
 }
 
 .header .logo {
@@ -18,18 +19,23 @@ body {
 
 .headline .caption .title {
   width: 100%;
-  position: absolute;
+  position: relative;
+  border: 2px solid;
+  border-color: #003366;
+  border-radius: 10px;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #FFFFCC;
 }
 
 .headline .caption .title h1 {
-  color: #fff;
+  color: #000;
   font-size: 1.2em;
+  font-weight: bold;
 }
 
 .headline .caption .body {
+  border: 2px solid;
   font-size: 0.8em;
 }
 
@@ -39,6 +45,7 @@ body {
 }
 
 .posts .post .title {
+  border-bottom: 1px solid;
   font-size: 1.2em;
   font-weight: bold;
 }
